@@ -60,10 +60,7 @@ def compute_c_index(hazards, survival_event, survival_time, compute_mean=True):
       compute_mean (optional): take the mean over conditions
   """
 
-  survival_time_i = survival_time.unsqueeze(dim=1)
-  survival_time_j = survival_time.unsqueeze(dim=0)
-  j_surv_greater = (survival_time_j > survival_time_i).to(torch.float32)  # n, n, num_cond
-
+  j_surv_greater = get_R_matrix(survival_time)
   survival_event_i = survival_event.unsqueeze(dim=1)
 
   hazards_i = hazards.unsqueeze(dim=1)
