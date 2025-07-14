@@ -17,7 +17,7 @@ This repository contains the code for the experiments in the onset acceleration 
 
 The loss functions for training a neural Cox PH model are defined in `nn_metrics.py`. Specifically `neg_cox_log_likelihood` defines the loss function and `compute_c_index` defines the evaluation metric.
 
-These functions can be used to optimize and evaluate any PyTorch model. 
+These functions can be used to optimise and evaluate any PyTorch model. 
 
 ### Code structure
 
